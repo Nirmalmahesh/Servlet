@@ -19,7 +19,29 @@ Hint : Refer web.xml file for Confiquration and Mapping
 public class AdderServlet extends HttpServlet{
 
 	@Override
-	protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		//Getting parameter Passed By the html file or jsp file
+				int i = Integer.parseInt(req.getParameter("num1"));
+				int j = Integer.parseInt(req.getParameter("num2"));
+				
+				int k = i + j;
+				
+				
+				
+				//Creating Object for printWriter		
+				PrintWriter out= resp.getWriter();
+				
+				out.println("It is get Request");
+				
+				//Printing the Output
+				out.println("Result is: "+k);
+				
+	}
+	
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
 		
@@ -30,13 +52,20 @@ public class AdderServlet extends HttpServlet{
 		int k = i + j;
 		
 		
+		
 		//Creating Object for printWriter		
 		PrintWriter out= res.getWriter();
+		
+		out.println("It is Post Request");
 		
 		//Printing the Output
 		out.println("Result is: "+k);
 		
+		
 	}
+	
+	
+	
 
 	
 	

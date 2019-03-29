@@ -4,7 +4,8 @@
   
   <servlet>  		
   		<servlet-name>Addition</servlet-name>
-  		<servlet-class>com.servlet.example.AdderServlet</servlet-class>  
+  		<servlet-class>com.servlet.example.AdderServlet</servlet-class> 
+  		
   </servlet>
   
   <servlet-mapping>  	
